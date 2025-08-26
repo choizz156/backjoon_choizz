@@ -22,11 +22,13 @@ class Solution {
         return f.entrySet().stream().sorted((
         	(o1,o2) ->
             {
-                int cnt = o2.getValue().compareTo(o1.getValue());
-                if(cnt == 0){
-                    o1.getKey().compareTo(o2.getKey());
-            }
-                return cnt;
-            })).mapToInt(Map.Entry::getKey).toArray();
+                     int cnt = o2.getValue().compareTo(o1.getValue());
+                	 if(cnt == 0){
+                    	o1.getKey().compareTo(o2.getKey());
+                	 } 	
+                     return cnt;
+            }))
+            .mapToInt(Map.Entry::getKey)
+            .toArray();
     }
 }
